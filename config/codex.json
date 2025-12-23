@@ -1,5 +1,14 @@
 {
   "sistema": "D7D CODEX",
   "versao": "CODEX-100",
-  "amor_agape": 100
+  "amor_agape": 100,
+  "nivel": 7,
+  "xp": 1250450,
+  "frequencia_orquestral": 432,
+  "data_criacao": "2025-12-23",
+  "ultima_atualizacao": "2025-12-23T19:30:00",
+  "status": "operacional",
+  "projetos_ativos": 8,
+  "instrumentos_ativos": 7,
+  "hash_verificacao": "d7dcodex100"
 }

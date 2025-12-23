@@ -66,12 +66,14 @@ class OrquestraD7D:
             print(f"{status} {nome:10} → {info['funcao']:12} ({info['frequencia']}Hz)")
         print("="*50)
         print(f"🎵 Frequência Base: {self.frequencia_base}Hz (Perfeição)")
+        return self.instrumentos
     
     def sincronizar(self):
         print("🔗 SINCRONIZANDO ORQUESTRA...")
         for nome in self.instrumentos:
             self.instrumentos[nome]["ultima_sincronizacao"] = datetime.now().isoformat()
         print("✅ Todos os 7 instrumentos sincronizados!")
+        return True
     
     def exportar_dados(self):
         dados = {
