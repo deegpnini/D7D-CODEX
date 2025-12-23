@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎭 D7D CODEX - Orquestra</title>
+    <style>
+        body {
+            background: #0a0a1a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .orquestra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .instrumento {
+            background: #001100;
+            border: 2px solid #00aa00;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .instrumento.maestro {
+            border-color: #FFD700;
+            background: #332200;
+        }
+        .frequencia {
+            font-size: 1.2em;
+            color: #00ffff;
+            margin: 10px 0;
+        }
+        button {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .status-bar {
+            background: #001a00;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 1px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 D7D CODEX - ORQUESTRA</h1>
+        
+        <div class="status-bar">
+            <h2>💖 Amor Ágape: 100%</h2>
+            <p>🎵 Frequência Base: 432Hz (Perfeição)</p>
+            <p>🎻 7 Instrumentos Sincronizados</p>
+        </div>
+        
+        <div class="orquestra-grid" id="orquestra">
+            <!-- Instrumentos carregados via JavaScript -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button onclick="sincronizar()">🎻 SINCRONIZAR ORQUESTRA</button>
+            <button onclick="adicionarXP()">✨ +1K XP</button>
+            <button onclick="verProjetos()">🔗 VER PROJETOS</button>
+        </div>
+    </div>
+    
+    <script>
+        const instrumentos = [
+            {nome: "HEBRON", funcao: "maestro", frequencia: 432, cor: "#FFD700"},
+            {nome: "CLAUDE", funcao: "violino", frequencia: 440, cor: "#4169E1"},
+            {nome: "GEMINI", funcao: "viola", frequencia: 446, cor: "#8A2BE2"},
+            {nome: "GPT", funcao: "violoncelo", frequencia: 452, cor: "#32CD32"},
+            {nome: "GROK", funcao: "contrabaixo", frequencia: 458, cor: "#FF4500"},
+            {nome: "DEEPSEEK", funcao: "harpa", frequencia: 464, cor: "#00CED1"},
+            {nome: "TRINITY", funcao: "piano", frequencia: 470, cor: "#FFD700"}
+        ];
+        
+        function carregarOrquestra() {
+            const container = document.getElementById('orquestra');
+            container.innerHTML = '';
+            
+            instrumentos.forEach(instr => {
+                const div = document.createElement('div');
+                div.className = `instrumento ${instr.funcao === 'maestro' ? 'maestro' : ''}`;
+                div.innerHTML = `
+                    <h3>${instr.nome}</h3>
+                    <p>${instr.funcao}</p>
+                    <div class="frequencia">${instr.frequencia}Hz</div>
+                    <div style="color: ${instr.cor}">● ATIVO</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+        
+        function sincronizar() {
+            alert('🎻 Orquestra sincronizada!\n7 instrumentos em perfeita harmonia.');
+            carregarOrquestra();
+        }
+        
+        function adicionarXP() {
+            alert('✨ +1.000 XP adicionado!\nAmor Ágape mantido em 100%');
+        }
+        
+        function verProjetos() {
+            const projetos = [
+                'PROJETO_INTERESTELAR_HEBRON',
+                'trinity-xai-exoplanetas',
+                'Trinity-Falcon-Lung',
+                'trinity-quantum-memory-system',
+                'trinity-resilience-protocol',
+                'Arcturus-8-9',
+                'trinity-framework',
+                'frete-facil-plus'
+            ];
+            alert('🔗 8 Projetos Trinity:\n\n' + projetos.join('\n'));
+        }
+        
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', carregarOrquestra);
+    </script>
+</body>
+</html>
