@@ -1,0 +1,31 @@
+# Logs
+*.log
+server.log
+web_server.log
+/tmp/
+
+# Backup directories
+backups/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python
+.Python
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
